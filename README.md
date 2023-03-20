@@ -1,3 +1,43 @@
+# Комментарии к ДЗ по бэкенду
+
+1. В директории src находятся 3 файла:
+
+app.py -- API сервера
+client.py -- логика клиента
+utils.py -- вспомогательный модуль
+
+2. Для того, чтобы создать Docker container из корневой папки пропишите:
+
+docker build -t ds-backend . 
+
+Или воспользуйтесь скриптом build.sh:
+
+```
+bash build.sh
+```
+
+3. Запустите контейнер скриптом run.sh:
+
+```
+bash run.sh
+```
+
+4. Теперь вы можете использовать код клиента или обращаться к API через терминал с помощью curl'а:
+
+Для чтения номера с 1-й картинки:
+
+```
+curl http://0.0.0.0:8080/read-several-numbers?id=10022
+```
+
+Для чтения с двух и более:
+```
+curl http://0.0.0.0:8080/read-several-numbers?id=10022\&id=9965
+```
+
+5. Enjoy!
+
+
 # Репозиторий к семинару "Основы backend-разработки"
 
 ## Что нужно сделать перед семинаром?
@@ -11,3 +51,4 @@
 1. установить VS Code на свою машину
 2. установить в VS Code расширение "Remote - SSH" - [инструкция](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) (раздел "Getting started")
 3. открыть проект в VS Code через Remote SSH
+
